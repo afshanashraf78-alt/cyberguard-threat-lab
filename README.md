@@ -21,9 +21,6 @@ Then open `http://localhost:3000`.
 - `public/manus-routes.json` declares the page route for Manus preview tooling.
 - `server.mjs` serves the site locally without a framework or dependency install.
 
-## Dataset provenance
-
-The archive retains the sample names, years, categories, and displayed historical infection figures from [CyberNovaOS `data.js`](https://github.com/Durray-Shahwar9/CyberNovaOS/blob/main/data.js), with source attribution. It excludes the upstream code and descriptive prose; estimates and qualitative figures are labeled. The source values have not been independently validated, are not live telemetry, and use differing units.
 
 ## GitHub Pages
 
