@@ -1,4 +1,4 @@
-// Historical fact fields adapted from the CyberNovaOS sample table; no upstream prose or code is included.
+// Historical malware fact records for educational use; estimates and qualitative values are labeled.
 export const malwareSamples = [
   {
     "id": "wannacry",

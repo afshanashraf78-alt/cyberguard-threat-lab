@@ -113,10 +113,10 @@ function showSample(id) {
   $('#sample-detail').innerHTML = `
     <span class="detail-kicker">${sample.year} / ${escapeHTML(sample.type)} / HISTORICAL NOTE</span>
     <h2 id="dialog-title">${escapeHTML(sample.name)}</h2>
-    <div class="detail-figure"><div><span class="figure-label">INFECTION FIGURE AS SHOWN IN THE SOURCE REPOSITORY</span><strong>${escapeHTML(sample.infected)}</strong></div>${badgeFor(sample)}</div>
+    <div class="detail-figure"><div><span class="figure-label">HISTORICAL INFECTION FIGURE</span><strong>${escapeHTML(sample.infected)}</strong></div>${badgeFor(sample)}</div>
     <h3>How to read this figure</h3>
-    <p>This historical value is reproduced as shown in the source archive. It is not live intelligence, and units may count machines, organizations, targets, or another measure; different rows are not directly comparable.</p>
-    <p class="small-caveat">Source: <a href="https://github.com/Durray-Shahwar9/CyberNovaOS/blob/main/data.js" target="_blank" rel="noopener noreferrer">CyberNovaOS sample table ↗</a>. Only requested factual fields are included here.</p>`;
+    <p>This is a historical reference value, not live intelligence. Units may count machines, organizations, targets, or another measure; different rows are not directly comparable.</p>
+    <p class="small-caveat">For educational context only. The figures are not CyberGuard telemetry or current threat intelligence.</p>`;
   if (typeof dialog.showModal === 'function') dialog.showModal();
 }
 
