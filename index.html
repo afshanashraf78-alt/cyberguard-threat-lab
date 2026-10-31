@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07130f">
+  <meta name="description" content="CyberGuard makes cybersecurity practical: explore historical threats, run safe browser-only learning simulations, and build a clearer defense plan.">
+  <title>CyberGuard — Security with a curious mind</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#signal" aria-label="CyberGuard home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3.5 29 7.7v8.8c0 7-4.3 12.6-11 16-6.7-3.4-11-9-11-16V7.7L18 3.5Z"/><path d="m12.5 18.1 3.5 3.5 7.8-8"/></svg></span>
+      <span class="brand-name">CYBERGUARD<span>SECURITY SYSTEMS</span></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#signal">Signal</a>
+      <a href="#library">Threat library</a>
+      <a href="#simulator">Sandbox</a>
+      <a href="#defense">Defend</a>
+      <a href="#health">Health check</a>
+      <a href="#services">Services</a>
+    </nav>
+    <a class="header-cta" href="#assessment">Request an assessment <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="signal" aria-labelledby="hero-title">
+      <canvas id="signal-rain" class="signal-rain" aria-hidden="true"></canvas>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot"></span> CYBERGUARD / THREAT INTELLIGENCE</p>
+        <h1 id="hero-title">Security with<br>a <em>curious</em> mind.</h1>
+        <p class="hero-lede">The best defense starts with a better question. Explore the signals behind historic attacks, then practice the decisions that make teams more resilient.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#library">Explore the threat archive <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#assessment">Plan an authorized review <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero-note"><span aria-hidden="true">⌁</span> Learning environment only. No files or external systems are scanned.</p>
+      </div>
+      <aside class="posture-panel" aria-label="Sample security posture dashboard">
+        <div class="panel-topline"><span><i class="tiny-led"></i> SYNTHETIC POSTURE</span><span class="demo-pill">DEMO DATA</span></div>
+        <div class="score-row"><div><span class="micro-label">SAMPLE POSTURE SCORE</span><div class="score-number">92<span>/100</span></div></div><div class="score-ring" aria-hidden="true"><span>92</span></div></div>
+        <div class="panel-divider"></div>
+        <div class="sample-metrics">
+          <div><span class="micro-label">IDENTITIES</span><strong>1,248</strong><small>illustrative count</small></div>
+          <div><span class="micro-label">ENDPOINTS</span><strong>384</strong><small>3 sample alerts</small></div>
+          <div><span class="micro-label">RISK TREND</span><strong class="trend">−26%</strong><small>demo comparison</small></div>
+        </div>
+        <div class="panel-foot"><span>Scenario status</span><strong><i class="tiny-led"></i> SIMULATED / LOCAL</strong></div>
+      </aside>
+      <div class="hero-coordinate" aria-hidden="true">SIGNAL 01 <span>32 / 11 / 1971—2021</span></div>
+    </section>
+
+    <section class="metric-strip section-shell" aria-label="Historical threat archive figures">
+      <div class="metric-intro"><span class="eyebrow">ARCHIVE AT A GLANCE</span><span>Historical records, not live telemetry.</span></div>
+      <div class="archive-stat"><strong id="sample-total">32</strong><span>threat samples</span></div>
+      <div class="archive-stat"><strong id="type-total">11</strong><span>malware families</span></div>
+      <div class="archive-stat"><strong id="year-span">50</strong><span>years in the archive</span></div>
+      <a class="strip-link" href="#library">Browse the archive <span aria-hidden="true">↘</span></a>
+    </section>
+
+    <section class="section section-shell library-section" id="library" aria-labelledby="library-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow">01 / HISTORICAL SIGNALS</p><h2 id="library-title">Thirty-two cases.<br><em>One evolving threat.</em></h2></div>
+        <p class="section-intro">A browsable archive of the malware incidents that shaped security thinking. Each record keeps the source project's displayed year, category and infection figure.</p>
+      </div>
+      <div class="source-note"><span class="source-icon" aria-hidden="true">i</span><p><strong>Source context:</strong> sample names, years, categories, figures and short history notes are reproduced from the <a href="https://github.com/Durray-Shahwar9/CyberNovaOS/blob/main/data.js" target="_blank" rel="noreferrer">CyberNovaOS data.js repository file</a>. Figures use different units and levels of certainty. Values marked <b>ESTIMATE</b> or <b>APPROX.</b> are not precise measurements; qualitative figures are shown as written. These are historical source figures, not CyberGuard telemetry.</p></div>
+      <div class="library-controls" role="search" aria-label="Filter the historical threat archive">
+        <label class="search-field"><span>Search archive</span><input id="sample-search" type="search" placeholder="Name, year, type, figure…" autocomplete="off"></label>
+        <label><span>Threat type</span><select id="type-filter"><option value="all">All types</option></select></label>
+        <label><span>Year</span><select id="year-filter"><option value="all">All years</option></select></label>
+        <label><span>Sort</span><select id="sort-order"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="name">Name A–Z</option></select></label>
+      </div>
+      <div class="library-meta"><p id="results-count" aria-live="polite">Showing 32 of 32 records</p><button class="clear-filters" id="clear-filters" type="button">Clear filters <span aria-hidden="true">×</span></button></div>
+      <div class="sample-grid" id="sample-grid" aria-live="polite"></div>
+      <div class="archive-source"><span>Source file / data.js</span><span>Dataset preserved for learning use</span><a href="https://github.com/Durray-Shahwar9/CyberNovaOS/blob/main/data.js" target="_blank" rel="noreferrer">View repository source ↗</a></div>
+    </section>
+
+    <section class="section section-shell lab-section" id="simulator" aria-labelledby="simulator-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow">02 / ISOLATED TRAINING SPACE</p><h2 id="simulator-title">Watch defenses<br><em>change the outcome.</em></h2></div>
+        <p class="section-intro">A harmless, browser-only network model. Tune the scenario, start a simulated outbreak, and compare how patching and a firewall change the result.</p>
+      </div>
+      <div class="safety-banner"><span aria-hidden="true">◇</span><p><strong>Contained by design.</strong> The dots and spread model are synthetic. No malware runs, and no computer or outside network is contacted.</p><span class="local-badge">LOCAL DEMO</span></div>
+      <div class="simulator-layout">
+        <aside class="lab-controls">
+          <div class="control-title"><span class="micro-label">SIMULATION INPUTS</span><span class="control-index">LAB / 001</span></div>
+          <label class="control-block"><span>Threat profile</span><select id="sandbox-threat" aria-label="Choose a historical threat profile"></select></label>
+          <label class="control-block range-control"><span>Network size <b><output id="network-size-value">80</output> synthetic machines</b></span><input id="network-size" type="range" min="30" max="150" value="80"></label>
+          <label class="control-block range-control"><span>Pre-patched <b><output id="patched-value">0</output>%</b></span><input id="patched-percent" type="range" min="0" max="90" value="0"></label>
+          <label class="check-control"><input id="firewall-toggle" type="checkbox"><span><strong>Firewall enabled</strong><small>Illustrative model blocks 60% of spread attempts</small></span></label>
+          <div class="simulation-buttons"><button class="button button-primary" id="run-simulation" type="button">Run safe simulation <span aria-hidden="true">▶</span></button><button class="button button-quiet" id="reset-simulation" type="button">Reset</button></div>
+          <p class="model-caveat">The scenario is a teaching model, not a forecast of real-world malware behavior.</p>
+        </aside>
+        <div class="network-panel">
+          <div class="network-topline"><div><span class="micro-label">SYNTHETIC NETWORK</span><span id="network-status" class="network-state" aria-live="polite">READY / 80 NODES</span></div><span class="node-legend"><i class="healthy-key"></i> Healthy <i class="infected-key"></i> Affected <i class="patched-key"></i> Patched</span></div>
+          <div class="network-canvas-wrap"><canvas id="network-canvas" width="900" height="360" role="img" aria-label="Synthetic network simulation showing healthy, affected and patched machines"></canvas></div>
+          <div class="simulation-readouts"><div><span>AT RISK</span><strong id="healthy-count">80</strong></div><div><span>AFFECTED</span><strong id="infected-count" class="danger-text">0</strong></div><div><span>PATCHED</span><strong id="patched-count" class="safe-text">0</strong></div><div><span>SIM STEPS</span><strong id="step-count">0</strong></div></div>
+          <div class="progress-track" role="progressbar" aria-label="Share of synthetic network affected" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="spread-progress"></span></div>
+          <p class="simulation-message" id="simulation-message" aria-live="polite">Choose a scenario and run the simulation to see the synthetic network change.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell defense-section" id="defense" aria-labelledby="defense-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow">03 / DEFEND THE NETWORK</p><h2 id="defense-title">Three actions.<br><em>One calm response.</em></h2></div>
+        <p class="section-intro">Take control of a fictional 60-machine network. Each round gives you three actions before the model advances. Keep fewer than 40% of machines affected through 12 rounds.</p>
+      </div>
+      <div class="safety-banner"><span aria-hidden="true">◇</span><p><strong>Practice, not prediction.</strong> This game uses mock nodes and simplified spread rules to teach defensive prioritization.</p><span class="local-badge">60 MOCK NODES</span></div>
+      <div class="defense-layout">
+        <div class="defense-console">
+          <div class="defense-console-head"><span class="micro-label">INCIDENT TABLETOP</span><label>Scenario<select id="defense-threat" aria-label="Choose a defense scenario"></select></label></div>
+          <div class="round-readouts"><div><span>ROUND</span><strong><b id="round-number">1</b> / 12</strong></div><div><span>ACTIONS</span><strong id="actions-left">3</strong></div><div><span>AFFECTED</span><strong id="defense-infected">2</strong><small>of 60 machines</small></div></div>
+          <div class="action-picker" role="group" aria-label="Choose a defensive action"><button class="action-button is-selected" data-mode="patch" type="button"><span>01</span>Patch</button><button class="action-button" data-mode="isolate" type="button"><span>02</span>Isolate</button><button class="action-button" data-mode="clean" type="button"><span>03</span>Clean</button></div>
+          <p class="action-help" id="action-help" aria-live="polite">Patch: select a healthy node to make it immune to the simulation.</p>
+          <div class="machine-grid" id="machine-grid" role="group" aria-label="Select a machine to apply the chosen defense action"></div>
+          <p class="node-feedback" id="node-feedback" aria-live="polite">Choose an action, then select a machine.</p>
+          <div class="defense-actions"><button class="button button-primary" id="end-round" type="button">End round <span aria-hidden="true">→</span></button><button class="button button-quiet" id="new-defense-game" type="button">New scenario</button></div>
+          <p class="model-caveat">Win condition: fewer than 24 affected machines after round 12. A patched or isolated node cannot spread the scenario.</p>
+        </div>
+        <aside class="defense-brief"><span class="micro-label">FIELD NOTE / 03</span><h3>Contain first.<br><em>Recover deliberately.</em></h3><p>Patch vulnerable systems, isolate suspicious endpoints, and clean affected machines. The exercise rewards prioritization; it does not represent a real incident response tool.</p><div class="legend-stack"><span><i class="healthy-key"></i> Healthy</span><span><i class="infected-key"></i> Affected</span><span><i class="patched-key"></i> Patched / clean</span><span><i class="isolated-key"></i> Isolated</span></div><div class="round-result" id="round-result" aria-live="polite">Round 1 is ready. You have 3 actions.</div></aside>
+      </div>
+    </section>
+
+    <section class="section section-shell health-section" id="health" aria-labelledby="health-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow">04 / SAFE LOCAL CHECK</p><h2 id="health-title">A clearer picture<br><em>starts close to home.</em></h2></div>
+        <p class="section-intro">This page can report a few browser-visible signals and offer a practical checklist. It cannot inspect your files, installed apps, or the whole device.</p>
+      </div>
+      <div class="health-layout">
+        <div class="health-card">
+          <div class="card-topline"><span class="micro-label">BROWSER-VISIBLE SIGNALS</span><span class="local-badge">NO FILE SCAN</span></div>
+          <div class="health-readout" id="browser-checks" aria-live="polite"><div><span>Connection</span><strong id="connection-result">Checking…</strong></div><div><span>Browser</span><strong id="browser-result">This browser</strong></div><div><span>Network status</span><strong id="online-result">Checking…</strong></div></div>
+          <p class="small-caveat">These signals come from standard browser settings. They are not an antivirus scan and do not prove the device is clean.</p>
+        </div>
+        <form class="habits-card" id="habits-form">
+          <div class="card-topline"><span class="micro-label">YOUR SECURITY HABITS</span><span class="step-label">SELF-CHECK</span></div>
+          <fieldset><legend>Which protections do you already use?</legend><label class="habit-option"><input type="checkbox" name="habit" value="updates"><span>System and apps update automatically</span></label><label class="habit-option"><input type="checkbox" name="habit" value="antivirus"><span>Built-in security protection is on</span></label><label class="habit-option"><input type="checkbox" name="habit" value="backup"><span>I keep a separate, recoverable backup</span></label><label class="habit-option"><input type="checkbox" name="habit" value="mfa"><span>I use multi-factor login on key accounts</span></label><label class="habit-option"><input type="checkbox" name="habit" value="links"><span>I verify unexpected links and attachments</span></label></fieldset>
+          <button class="button button-primary" type="submit">Get my next steps <span aria-hidden="true">→</span></button>
+          <div class="recommendations" id="recommendations" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-shell services-section" id="services" aria-labelledby="services-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow">05 / PRACTICAL SECURITY</p><h2 id="services-title">Security that<br><em>keeps work moving.</em></h2></div>
+        <p class="section-intro">From the first alert to a stronger security habit, CyberGuard helps teams turn complexity into clear, owned next steps.</p>
+      </div>
+      <div class="service-list">
+        <article class="service-row"><span class="service-number">01 / VISIBILITY</span><div><h3>Threat monitoring</h3><p>Surface unusual activity and give your team a clearer path from alert to action.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+        <article class="service-row"><span class="service-number">02 / EXPOSURE</span><div><h3>Vulnerability assessment</h3><p>Understand what is exposed, what matters most, and how to reduce risk safely.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+        <article class="service-row"><span class="service-number">03 / ASSURANCE</span><div><h3>Penetration testing</h3><p>Authorized, scoped testing that helps validate controls without surprise or ambiguity.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+        <article class="service-row"><span class="service-number">04 / RESPONSE</span><div><h3>Incident response</h3><p>Bring structure to containment, investigation, recovery and the lessons that follow.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+        <article class="service-row"><span class="service-number">05 / READINESS</span><div><h3>Compliance advisory</h3><p>Turn security frameworks into practical operating habits that teams can maintain.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+        <article class="service-row"><span class="service-number">06 / CULTURE</span><div><h3>Security training</h3><p>Help people recognize suspicious requests and protect the work they own.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+      </div>
+    </section>
+
+    <section class="section section-shell assessment-section" id="assessment" aria-labelledby="assessment-title">
+      <div class="assessment-copy"><p class="eyebrow">06 / AUTHORIZED ASSESSMENT</p><h2 id="assessment-title">Bring us an<br><em>approved scope.</em></h2><p>Use this permission-first intake demo to outline an assessment request. This copy does not scan the domain or send your details to a server.</p><div class="assurance-points"><span><i>✓</i> Permission-first</span><span><i>✓</i> Clear scope</span><span><i>✓</i> No destructive testing</span></div></div>
+      <form class="assessment-form" id="assessment-form">
+        <div class="card-topline"><span class="micro-label">ASSESSMENT INTAKE / DEMO</span><span class="local-badge">NOT SENT</span></div>
+        <label>Website or domain<input id="assessment-domain" type="text" placeholder="example.com" autocomplete="url" required></label>
+        <label>Assessment scope<select id="assessment-scope" required><option value="">Choose a scope</option><option>Quick exposure review</option><option>Web application assessment</option><option>Infrastructure review</option><option>Security readiness conversation</option></select></label>
+        <label class="consent-line"><input id="assessment-consent" type="checkbox" required><span>I own this website or have explicit permission to request an assessment.</span></label>
+        <label>Work email<input id="assessment-email" type="email" placeholder="you@company.com" autocomplete="email" required></label>
+        <label>What should we know?<textarea id="assessment-message" rows="3" placeholder="Share context and boundaries for the requested review."></textarea></label>
+        <button class="button button-primary" type="submit">Review demo request <span aria-hidden="true">→</span></button>
+        <p class="form-status" id="assessment-status" aria-live="polite">Demo only. No scan is run, and this form does not transmit your information.</p>
+      </form>
+    </section>
+
+    <section class="closing-band section-shell" aria-label="Contact CyberGuard">
+      <div><span class="eyebrow">A GOOD NEXT STEP IS A CLEAR ONE</span><h2>Make the next move <em>a secure one.</em></h2></div>
+      <a class="button button-primary" href="#assessment">Start with an authorized scope <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <a class="brand" href="#signal" aria-label="CyberGuard home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3.5 29 7.7v8.8c0 7-4.3 12.6-11 16-6.7-3.4-11-9-11-16V7.7L18 3.5Z"/><path d="m12.5 18.1 3.5 3.5 7.8-8"/></svg></span><span class="brand-name">CYBERGUARD<span>SECURITY SYSTEMS</span></span></a>
+    <p>Clarity is a control.<br><span>Cyber learning environment / all lab activity is simulated.</span></p>
+    <div class="footer-links"><a href="#library">Threat archive</a><a href="#health">Health check</a><a href="#assessment">Contact / intake</a></div>
+    <span class="copyright">© 2026 CyberGuard / Educational demo</span>
+  </footer>
+
+  <dialog class="sample-dialog" id="sample-dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Close sample details">×</button></form>
+    <div id="sample-detail"></div>
+  </dialog>
+</body>
+</html>
